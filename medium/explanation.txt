@@ -1,0 +1,11 @@
+Explanation:
+
+The provided Python function majorityElement(v: List[int]) -> List[int] is designed to find all the majority elements in a list of integers v. A majority element is defined as an element that appears more than n/3 times in the list, where n is the size of the list.
+
+The function begins by initializing two counters cnt1 and cnt2 to 0, and two elements el1 and el2 to negative infinity. These will be used to keep track of the two potential majority elements and their counts.
+
+The function then iterates over the list using the Extended Boyer Moore’s Voting Algorithm. This algorithm works by maintaining two counters for two elements. For each element in the list, it checks if the counters are zero and the element is not equal to the other tracked element. If so, it sets the counter to 1 and updates the tracked element. If the element is equal to one of the tracked elements, it increments the corresponding counter. If the element is not equal to either of the tracked elements, it decrements both counters. This way, the algorithm can track the two elements that have the highest counts.
+
+After the algorithm finishes, the function creates an empty list ls to store the majority elements. It then iterates over the list again to manually check if the elements stored in el1 and el2 are indeed majority elements. It does this by resetting the counters and incrementing them whenever it encounters el1 or el2 in the list.
+
+Finally, the function calculates the minimum count mini a majority element should have, which is n/3 + 1. It checks if the counts of el1 and el2 are greater than or equal to mini. If so, it appends the element to the list ls. The function then returns ls, which contains all the majority elements in the list.

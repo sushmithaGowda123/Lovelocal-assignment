@@ -1,0 +1,9 @@
+Algorithm:
+
+To finding the shortest palindrome by adding characters at the start of the given string.
+
+1. Check if the input string s is empty. If it is, return an empty string.
+2. Reverse the input string s and store it in rev_s.
+3. Iterate over the length of the string s plus one.
+4. In each iteration, check if the string s starts with the substring of rev_s from index i to the end.
+5. If it does, return the substring of rev_s from the start to index i concatenated with the original string s. This forms the shortest palindrome.

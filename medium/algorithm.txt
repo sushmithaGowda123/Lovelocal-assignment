@@ -1,0 +1,27 @@
+Algorithm:
+
+Here we use Boyer Moore's Voting Algorithm to solve this problem.
+
+1. Initialize two counters (cnt1 and cnt2) and two elements (el1 and el2) to track potential majority elements. Set both counters to 0 and both elements to negative infinity.
+
+2. Iterate:
+
+ - If cnt1 is 0 and el2 is not equal to v[i], set cnt1 to 1 and el1 to v[i].
+ - If cnt2 is 0 and el1 is not equal to v[i], set cnt2 to 1 and el2 to v[i].
+ - If v[i] is equal to el1, increment cnt1 by 1.
+ - If v[i] is equal to el2, increment cnt2 by 1.
+ - If none of the above conditions are met, decrement both cnt1 and cnt2 by 1. 
+3. After the loop, we have two potential majority elements stored in el1 and el2. We need to manually check if they are indeed majority elements.
+
+4. Reset the counters cnt1 and cnt2 to 0.
+
+5. Iterate through the input list v again. For each element v[i]:
+
+ - If v[i] is equal to el1, increment cnt1 by 1.
+ - If v[i] is equal to el2, increment cnt2 by 1.
+
+6. Calculate the minimum count required for an element to be considered a majority element. In this case, it is int(n / 3) + 1, where n is the size of the input list v.
+
+7. If cnt1 is greater than or equal to the minimum count, append el1 to the result list ls. If cnt2 is greater than or equal to the minimum count, append el2 to the result list ls.
+
+8. Finally, return the result list ls containing the majority elements.

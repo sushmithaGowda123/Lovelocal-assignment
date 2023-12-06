@@ -1,0 +1,11 @@
+Algorithm:
+
+1. Define function named length_of_last_word takes a string s as input.
+2. Split the string s into list of words using the split() method.
+3. Assign the resulting list of words to the variable words.
+4. Return the length of the last word in the words list using the len() function and indexing [-1] to access the last element.
+5. the user to enter a string s using the input() function and assign it to the variable s.
+6. Print the result of the function call using the print() function.
+
+This algorithm calculates the length of the last word in a given string by splitting the string into words and returning the length of the last word.
+

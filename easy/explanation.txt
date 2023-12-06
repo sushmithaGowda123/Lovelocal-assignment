@@ -1,0 +1,8 @@
+Explanation:
+
+1. The split() method is used on the input string s to split it into a list of words. split() splits the string at whitespace characters and returns a list of the individual words.
+2. The length of the last word in the words list is calculated using the len() function and the index -1. In Python, negative indices count from the end of the list, so -1 refers to the last element in the list.
+3. The length of the last word returns the result.
+
+
+For example, if the user enters the string "Hello world", the function will split it into the list ['Hello', 'world'] and return the length of the last word, which is 5.
